@@ -10,39 +10,43 @@
         
     </head>
 
-    <body onload="initJsStore(); readClients();">
+    <body onload="testOnline(); initJsStore(); readClients();">
 
-        <h1>Hello world</h1>
-
-        <form id="formulaire" action="" method="GET">
-            <label for="mail">Adresse mail </label>
-            <input type="email" name="mail" value="" />
-            <br/>
-            <label for="lname">Nom </label>
-            <input type="text" name="lname" value="" />
-            <br/>
-            <label for="fname">Prénom </label>
-            <input type="text" name="fname" value="" />
-        </form>
-                    
-        <button type="button" onclick="submit()">Ajouter</button>
-        <button type="button" onclick="readClients()">Afficher tout</button>
-
-        <form id="searchEngine" action="" method="GET">
-            <label for="column">Choisissez une colonne</label>
-            <select id="column" name="column">
-                <option value="mail">Mail</option>
-                <option value="nom">Nom</option>
-                <option value="prenom">Prénom</option>
-            </select>
-            <br/>
-            <label for="element">Elément à chercher</label>
-            <input id="element" type="text" name="element" value="">
-        </form>
-
-        <button type="button" onclick="search();">Chercher</button>
-        <button type="button" onclick="remove();">Supprimer</button>
-
+        <h1 id="online">Online</h1>
+        <div id="f">
+            <form id="formulaire" action="" method="GET">
+                <label for="mail">Adresse mail </label>
+                <input type="email" name="mail" value="" />
+                <br/>
+                <label for="lname">Nom </label>
+                <input type="text" name="lname" value="" />
+                <br/>
+                <label for="fname">Prénom </label>
+                <input type="text" name="fname" value="" />
+            </form>
+                        
+            <button type="button" onclick="submit()">Ajouter</button>
+            <button type="button" onclick="readClients()">Afficher tout</button>
+        </div>
+        
+        <div id='f'>
+            <form id="searchEngine" action="" method="GET">
+                <label for="column">Choisissez une colonne</label>
+                <select id="column" name="column">
+                    <option value="mail">Mail</option>
+                    <option value="nom">Nom</option>
+                    <option value="prenom">Prénom</option>
+                </select>
+                <br/>
+                <label for="element">Elément à chercher</label>
+                <input id="element" type="text" name="element" value="">
+            </form>
+    
+            <button type="button" onclick="search();">Chercher</button>
+            <button type="button" onclick="remove();">Supprimer</button>
+            <button type="button" onclick="drop();">Supprimer tout</button>
+        </div>
+        
 
         <div id="tab"></div>
 

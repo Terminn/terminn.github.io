@@ -7,7 +7,13 @@ if('serviceWorker' in navigator) {
     });
 }
 
-
+function testOnline() {
+    if(navigator.onLine === false) {
+        let status = document.getElementById("online");
+        status.textContent = "Offline";
+        status.id = "offline";
+    }
+}
 
 var dbName ='JsStore_Demo';
 function getDbSchema() {
@@ -61,7 +67,8 @@ async function submit() {
         alert("ERREUR");
     }
     if (noOfDataInserted > 0) {
-        alert('successfully added');
+        console.log('successfully added');
+        readClients();
     }
 }
 
@@ -181,6 +188,15 @@ async function remove() {
             console.log("No result");
             break;
     }
-    
+    readClients();
+}
 
+async function drop() {
+    connection.dropDb().then(function() {
+        console.log('Db deleted successfully');
+    }).catch(function(error) {
+        console.log(error);
+    });;
+    initJsStore();
+    readClients();
 }

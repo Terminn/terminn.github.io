@@ -8,9 +8,16 @@ a {
 }
 
 h1 {
-  color: red;
   text-align: center;
   font-size: 75px;
+}
+
+#online {
+  color: green;
+}
+
+#offline {
+  color: red;
 }
 
 form {
@@ -29,17 +36,21 @@ input,select {
 }
 
 button {
-  width: 100px;
-  height: 30px;
+  width: 120px;
+  height: 40px;
   margin: 10px;
-}
-
-img {
-  width: 300px;
 }
 
 #tab {
   margin: 10px;
+}
+
+#f {
+  background-color: aliceblue;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid black;
+  width: 440px;
 }
 
 table,tr,td {
