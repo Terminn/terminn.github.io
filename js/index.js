@@ -8,7 +8,7 @@ if('serviceWorker' in navigator) {
 }
 
 function testOnline() {
-    if(navigator.onLine === false) {
+    if(!navigator.onLine) {
         let status = document.getElementById("online");
         status.textContent = "Offline";
         status.id = "offline";
